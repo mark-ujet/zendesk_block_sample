@@ -34,6 +34,11 @@ view: ticket_metrics {
     sql: ${users.email} ;;
   }
 
+  dimension: assignee_demo_name {
+    type: string
+    sql: CONCAT('Assignee ', ${tickets.assignee_id}) ;;
+  }
+
   dimension: group_name {
     type: string
     sql: ${groups.name} ;;
@@ -54,6 +59,11 @@ view: ticket_metrics {
   dimension: organization_name {
     type: string
     sql: ${tickets.organization_name} ;;
+  }
+
+  dimension: organization_demo_name {
+    type: string
+    sql: CONCAT('Company ', ${tickets.organization_id}) ;;
   }
 
   # MINUTES
