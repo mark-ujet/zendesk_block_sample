@@ -35,7 +35,7 @@
     listen:
       date: ticket_metrics.created_date
       group: ticket_metrics.group_name
-      agent: ticket_metrics.assignee_email
+      agent: ticket_metrics.assignee_demo_name
 
   - name: average_response_time
     title: Average business hours to first response
@@ -50,7 +50,7 @@
     listen:
       date: ticket_metrics.created_date
       group: ticket_metrics.group_name
-      agent: ticket_metrics.assignee_email
+      agent: ticket_metrics.assignee_demo_name
 
   - name: tickets_solved
     title: All time tickets solved
@@ -64,7 +64,7 @@
     listen:
       date: ticket_metrics.created_date
       group: ticket_metrics.group_name
-      agent: ticket_metrics.assignee_email
+      agent: ticket_metrics.assignee_demo_name
 
   - name: performance_by_group
     title: Performance by group
@@ -97,7 +97,7 @@
     listen:
       date: ticket_metrics.created_date
       group: ticket_metrics.group_name
-      agent: ticket_metrics.assignee_email
+      agent: ticket_metrics.assignee_demo_name
 
   - name: performance_over_time
     title: Performance over time
@@ -133,14 +133,14 @@
     listen:
       date: ticket_metrics.created_date
       group: ticket_metrics.group_name
-      agent: ticket_metrics.assignee_email
+      agent: ticket_metrics.assignee_demo_name
 
   - name: performance_by_agent
     title: Performance by agent
     type: table
     model: zendesk_3
     explore: ticket_metrics
-    dimensions: [ticket_metrics.assignee_email]
+    dimensions: [ticket_metrics.assignee_demo_name]
     measures: [tickets.count_solved_tickets, ticket_metrics.avg_reply_time_in_hours__business,
       ticket_metrics.avg_first_resolution_time_in_days__business]
     sorts: [tickets.count_solved_tickets desc]
@@ -154,4 +154,4 @@
     listen:
       date: ticket_metrics.created_date
       group: ticket_metrics.group_name
-      agent: ticket_metrics.assignee_email
+      agent: ticket_metrics.assignee_demo_name
