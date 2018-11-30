@@ -22,7 +22,7 @@
 
   - name: new_open_tickets
     type: single_value
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     measures: [tickets.count]
     filters:
@@ -38,7 +38,7 @@
   - name: pending_tickets
     title: Pending tickets
     type: single_value
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [tickets.status]
     measures: [tickets.count]
@@ -55,7 +55,7 @@
   - name: closed_tickets
     title: Untitled Visualization
     type: single_value
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     measures: [tickets.count]
     filters:
@@ -71,7 +71,7 @@
   - name: tickets_by_channel
     title: Tickets submitted by channel
     type: looker_pie
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [tickets.via__channel]
     measures: [tickets.count]
@@ -86,7 +86,7 @@
   - name: tickets_and_orgs
     title: Ticket submissions over time
     type: looker_line
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [tickets.created_at_week]
     measures: [tickets.count, tickets.count_distinct_organizations]
@@ -118,7 +118,7 @@
   - name: count_by_status
     title: New, open, solved, and pending ticket count
     type: looker_column
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     measures: [tickets.count_solved_tickets, tickets.count_new_tickets, tickets.count_open_tickets,
       tickets.count_pending_tickets]
@@ -148,7 +148,7 @@
   - name: top_orgs
     title: Top 20 organizations by tickets submitted
     type: table
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [tickets.organization_name]
     measures: [tickets.count]
@@ -165,7 +165,7 @@
   - name: top_requesters
     title: Top 20 requesters by tickets submitted
     type: table
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [tickets.requester_email]
     measures: [tickets.count]
@@ -182,7 +182,7 @@
   - name: top_assignees
     title: Top 20 agents by all time tickets
     type: table
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [tickets.assignee_email]
     measures: [tickets.count]
@@ -202,7 +202,7 @@
 #   - name: ticket_tags
 #     title: Ticket tags
 #     type: looker_column
-#     model: zendesk
+#     model: zendesk_3
 #     explore: ticket__tags
 #     dimensions: [ticket__tags.value, ticket__tags.created_at_month]
 #     pivots: [ticket__tags.value]
@@ -234,7 +234,7 @@
 #   - name: ticket_tags
 #     title: Ticket tags
 #     type: looker_column
-#     model: zendesk
+#     model: zendesk_3
 #     explore: ticket__tags
 #     dimensions: [ticket__tags.value, ticket__tags.created_at_month]
 #     pivots: [ticket__tags.value]

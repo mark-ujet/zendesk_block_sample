@@ -25,7 +25,7 @@
   - name: avg_resolution_time
     title: Average business days to resolution
     type: single_value
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     measures: [ticket_metrics.avg_first_resolution_time_in_days__business]
     sorts: [ticket_metrics.avg_first_resolution_time_in_days__business desc]
@@ -40,7 +40,7 @@
   - name: average_response_time
     title: Average business hours to first response
     type: single_value
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     measures: [ticket_metrics.avg_reply_time_in_hours__business]
     sorts: [ticket_metrics.avg_reply_time_in_hours__business desc]
@@ -55,7 +55,7 @@
   - name: tickets_solved
     title: All time tickets solved
     type: single_value
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     measures: [tickets.count_solved_tickets]
     limit: 500
@@ -69,7 +69,7 @@
   - name: performance_by_group
     title: Performance by group
     type: looker_column
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [ticket_metrics.group_name]
     measures: [ticket_metrics.count, ticket_metrics.avg_first_resolution_time_in_days__business,
@@ -102,7 +102,7 @@
   - name: performance_over_time
     title: Performance over time
     type: looker_line
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [ticket_metrics.created_week]
     measures: [ticket_metrics.count, ticket_metrics.avg_reply_time_in_hours__business,
@@ -138,7 +138,7 @@
   - name: performance_by_agent
     title: Performance by agent
     type: table
-    model: zendesk
+    model: zendesk_3
     explore: ticket_metrics
     dimensions: [ticket_metrics.assignee_email]
     measures: [tickets.count_solved_tickets, ticket_metrics.avg_reply_time_in_hours__business,
