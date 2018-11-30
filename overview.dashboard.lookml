@@ -150,7 +150,7 @@
     type: table
     model: zendesk_3
     explore: ticket_metrics
-    dimensions: [tickets.organization_name]
+    dimensions: [tickets.organization_demo_name]
     measures: [tickets.count]
     sorts: [tickets.count desc]
     limit: 20
@@ -167,7 +167,7 @@
     type: table
     model: zendesk_3
     explore: ticket_metrics
-    dimensions: [tickets.requester_email]
+    dimensions: [tickets.requester_demo_name]
     measures: [tickets.count]
     sorts: [tickets.count desc]
     limit: 20
@@ -184,7 +184,7 @@
     type: table
     model: zendesk_3
     explore: ticket_metrics
-    dimensions: [tickets.assignee_email]
+    dimensions: [tickets.assignee_demo_name]
     measures: [tickets.count]
     sorts: [tickets.count desc]
     limit: 20

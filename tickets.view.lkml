@@ -12,6 +12,11 @@ view: tickets {
     sql: ${assignees.email} ;;
   }
 
+  dimension: assignee_demo_name {
+      type: string
+      sql: CONCAT('Assignee ', ${TABLE}.assignee_id) ;;
+  }
+
   ## include only if your Zendesk application utilizes the assignee_id field
   dimension: assignee_id {
     type: number
@@ -42,6 +47,11 @@ view: tickets {
     sql: ${TABLE}.organization_id ;;
   }
 
+  dimension: organization_demo_name {
+    type: string
+    sql: CONCAT('Company ', ${TABLE}.organization_id) ;;
+  }
+
   dimension: organization_name {
     type: string
     sql: ${organizations.name} ;;
@@ -62,6 +72,11 @@ view: tickets {
     type: number
     value_format_name: id
     sql: ${TABLE}.requester_id ;;
+  }
+
+  dimension: requester_demo_name {
+    type: string
+    sql: CONCAT('Customer ', ${TABLE}.requester_id) ;;
   }
 
   #   - dimension: satisfaction_rating__comment
