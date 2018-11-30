@@ -1,4 +1,4 @@
-connection: "stitch_vandelay"
+connection: "redshift-stitcher"
 
 # include all the views
 include: "*.view"
