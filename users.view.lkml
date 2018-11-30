@@ -1,5 +1,5 @@
 view: users {
-  sql_table_name: looker_zendesk.users ;;
+  sql_table_name: zendesksupportsample.users ;;
 
   dimension: id {
     primary_key: yes

@@ -1,5 +1,5 @@
 view: audits {
-  sql_table_name: looker_zendesk.audits ;;
+  sql_table_name: zendesksupportsample.audits ;;
 
   dimension: id {
     primary_key: yes
